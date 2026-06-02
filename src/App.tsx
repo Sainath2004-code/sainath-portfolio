@@ -11,6 +11,7 @@ import { EvidenceBoard } from './components/sections/EvidenceBoard'
 import { IdentityCard } from './components/sections/IdentityCard'
 import { LabRecords } from './components/sections/LabRecords'
 import { ProjectsRoom } from './components/sections/ProjectsRoom'
+import { ResumeProfile } from './components/sections/ResumeProfile'
 import { ResumeScanner } from './components/sections/ResumeScanner'
 import { SkillMatrix } from './components/sections/SkillMatrix'
 import { SocDashboard } from './components/sections/SocDashboard'
@@ -37,15 +38,17 @@ function App() {
 
   return (
     <div className="app">
+      <a className="skip-link" href="#main-content">Skip to portfolio content</a>
       <Preloader />
       <ScrollProgress />
       <Navbar />
       <Suspense fallback={<section className="hero-fallback">Rendering 3D Command Center...</section>}>
         <Hero />
       </Suspense>
-      <main>
+      <main id="main-content">
         <IdentityCard />
         <AboutTerminal />
+        <ResumeProfile />
         <SkillMatrix />
         <ToolsOrbit />
         <ProjectsRoom />

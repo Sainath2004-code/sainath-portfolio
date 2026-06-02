@@ -1,6 +1,4 @@
 import {
-  Activity,
-  BadgeCheck,
   Binary,
   Braces,
   BrainCircuit,
@@ -20,158 +18,233 @@ import type { LucideIcon } from 'lucide-react'
 export type Level = 'Learning' | 'Practiced' | 'Project Used'
 
 export const profile = {
-  name: 'Sainath Y',
+  name: 'Sainath Yoganatham',
   title: 'Cybersecurity & Digital Forensics Student',
-  location: 'India',
+  location: 'Puducherry, India',
+  email: 'yk.sainath29@gmail.com',
   status: 'Available for Internship / Fresher Opportunities',
   clearance: 'STUDENT_ANALYST',
   subtitle:
-    'Building practical skills in SOC, SIEM, Web Security, Vulnerability Assessment, and Digital Forensics.',
+    'Hands-on cybersecurity fresher focused on vulnerability assessment, log analysis, SOC/SIEM basics, web security, and digital forensics.',
   about:
-    'I am a Cybersecurity and Digital Forensics student with interest in SOC analysis, SIEM, web security, vulnerability assessment, network security, and digital investigation. I enjoy learning practical tools and building real-world security projects that improve my technical understanding.',
+    'A motivated cybersecurity fresher with hands-on experience in vulnerability assessment and log analysis using tools like Nessus and Burp Suite. Strong foundation in security analysis, risk management, practical cybersecurity training, and problem-solving. Interested in cybersecurity operations, SOC/SIEM basics, web security, vulnerability assessment, and digital forensics.',
   resumePath: '/resume.pdf',
 }
 
-export const badges = ['SOC Learner', 'SIEM Projects', 'Web Security', 'Digital Forensics', 'Network Analysis']
+export const badges = ['Vulnerability Assessment', 'Log Analysis', 'Security Analysis', 'Risk Management', 'Digital Forensics']
 
 export const focusAreas = [
-  'SOC Analysis',
-  'SIEM',
+  'SOC/SIEM Basics',
   'Web Security',
   'Vulnerability Assessment',
   'Digital Forensics',
-  'Network Security',
-  'Secure Web Development',
-  'Incident Response Basics',
+  'Log Analysis',
+  'Security Analysis',
+  'Risk Management',
+  'Penetration Testing',
+  'OSINT',
+]
+
+export const education = [
+  {
+    degree: 'Post Graduate Diploma in Cyber Security & Digital Forensics',
+    institution: 'Rashtriya Raksha University, Puducherry',
+    duration: '2025-2026',
+  },
+  {
+    degree: 'Bachelor of Computer Applications, Cyber Security',
+    institution: 'Hindustan Institute, Chennai',
+    duration: '2022-2025',
+  },
+  {
+    degree: 'Higher Secondary Certificate',
+    institution: 'Vidya Bhavan Higher Secondary School, Puducherry',
+    duration: '2021-2022',
+  },
+]
+
+export const experience = {
+  company: 'HTC Global Services, Chennai',
+  role: 'Project Trainee',
+  duration: 'July 2024 - June 2025',
+  points: [
+    'Conducted vulnerability assessments using Nessus and Burp Suite',
+    'Analyzed system and network logs to detect suspicious activities',
+    'Assisted in identifying and reporting security vulnerabilities',
+    'Supported risk analysis and mitigation planning activities',
+    'Maintained documentation of security findings and reports',
+    'Collaborated with team members to improve system security measures',
+    'Performed basic penetration testing tasks under guidance',
+    'Assisted in monitoring systems for potential threats',
+  ],
+}
+
+export const technicalSkills = {
+  programming: ['Python', 'Java', 'PHP'],
+  database: ['SQL'],
+  web: ['HTML'],
+  cybersecurity: ['OSINT', 'Vulnerability Assessment', 'Penetration Testing', 'Log Analysis', 'Security Analysis', 'Risk Management'],
+  operatingSystems: ['Windows', 'Linux', 'Ubuntu', 'Kali Linux', 'macOS'],
+  softSkills: ['Communication', 'Teamwork', 'Problem Solving', 'Time Management', 'Adaptability', 'Attention to Detail'],
+  languages: ['English', 'Tamil', 'French Basic'],
+}
+
+export const certifications = [
+  'Certified in Ethical Hacking - Guvi Education, 2022',
+  'Certified in Networking - Guvi Education, 2022',
+  'Certified in Dark Web - Guvi Education, 2022',
+  'Completed Bootcamp in Penetration Testing - Hackers Villa Cybersecurity Pvt Ltd, 2023',
+]
+
+export const participation = [
+  'Poster Presentation - SRM University TechUtsav 8.0, 2023',
+  'Paper Presentation - AURGANON23, SRM Ramapuram, 2023',
+  'Hackathon - Crescent Institute of Technology and Science, 2023',
+  'TryHackMe Hackathon, OSINT Techniques Sakura Room, 2024',
+  'DefCon Coimbatore event, AI with Cybersecurity, 2025',
 ]
 
 export const skillGroups = [
   {
-    group: 'SOC & SIEM',
+    group: 'Programming',
+    icon: Terminal,
+    skills: [
+      { name: 'Python', level: 'Practiced' as Level, progress: 70 },
+      { name: 'Java', level: 'Practiced' as Level, progress: 64 },
+      { name: 'PHP', level: 'Learning' as Level, progress: 58 },
+    ],
+  },
+  {
+    group: 'Cybersecurity',
+    icon: Shield,
+    skills: [
+      { name: 'Vulnerability Assessment', level: 'Practiced' as Level, progress: 76 },
+      { name: 'Penetration Testing', level: 'Practiced' as Level, progress: 68 },
+      { name: 'Security Analysis', level: 'Practiced' as Level, progress: 72 },
+      { name: 'Risk Management', level: 'Practiced' as Level, progress: 66 },
+    ],
+  },
+  {
+    group: 'SOC / SIEM Basics',
     icon: Radar,
     skills: [
-      { name: 'Alert triage', level: 'Practiced' as Level, progress: 64 },
-      { name: 'Log review', level: 'Project Used' as Level, progress: 70 },
-      { name: 'Dashboard design', level: 'Project Used' as Level, progress: 76 },
+      { name: 'Log Analysis', level: 'Practiced' as Level, progress: 74 },
+      { name: 'Threat Monitoring Basics', level: 'Learning' as Level, progress: 62 },
+      { name: 'Suspicious Activity Review', level: 'Practiced' as Level, progress: 68 },
     ],
   },
   {
-    group: 'Web Security',
+    group: 'Web & Database',
     icon: Globe,
     skills: [
-      { name: 'OWASP basics', level: 'Practiced' as Level, progress: 68 },
-      { name: 'HTTP interception', level: 'Practiced' as Level, progress: 72 },
-      { name: 'Vulnerability scanning', level: 'Practiced' as Level, progress: 66 },
+      { name: 'HTML', level: 'Practiced' as Level, progress: 70 },
+      { name: 'SQL', level: 'Practiced' as Level, progress: 66 },
+      { name: 'Burp Suite Web Testing', level: 'Practiced' as Level, progress: 72 },
     ],
   },
   {
-    group: 'Digital Forensics',
+    group: 'Operating Systems',
+    icon: Server,
+    skills: [
+      { name: 'Windows', level: 'Practiced' as Level, progress: 74 },
+      { name: 'Linux / Ubuntu', level: 'Practiced' as Level, progress: 68 },
+      { name: 'Kali Linux', level: 'Practiced' as Level, progress: 66 },
+      { name: 'macOS', level: 'Learning' as Level, progress: 54 },
+    ],
+  },
+  {
+    group: 'Digital Forensics & OSINT',
     icon: Fingerprint,
     skills: [
-      { name: 'Evidence imaging', level: 'Learning' as Level, progress: 58 },
-      { name: 'Timeline analysis', level: 'Learning' as Level, progress: 54 },
-      { name: 'Memory artifacts', level: 'Practiced' as Level, progress: 61 },
-    ],
-  },
-  {
-    group: 'Networking',
-    icon: Network,
-    skills: [
-      { name: 'Packet analysis', level: 'Practiced' as Level, progress: 69 },
-      { name: 'Protocol basics', level: 'Practiced' as Level, progress: 67 },
-      { name: 'Recon scanning', level: 'Practiced' as Level, progress: 63 },
-    ],
-  },
-  {
-    group: 'Development',
-    icon: Braces,
-    skills: [
-      { name: 'React', level: 'Project Used' as Level, progress: 74 },
-      { name: 'TypeScript', level: 'Project Used' as Level, progress: 70 },
-      { name: 'Secure workflows', level: 'Learning' as Level, progress: 62 },
-    ],
-  },
-  {
-    group: 'Cloud / Database Basics',
-    icon: Database,
-    skills: [
-      { name: 'Supabase', level: 'Project Used' as Level, progress: 65 },
-      { name: 'Auth concepts', level: 'Project Used' as Level, progress: 68 },
-      { name: 'Deployment planning', level: 'Learning' as Level, progress: 60 },
+      { name: 'Digital Forensics', level: 'Learning' as Level, progress: 62 },
+      { name: 'OSINT', level: 'Practiced' as Level, progress: 70 },
+      { name: 'Attention to Detail', level: 'Practiced' as Level, progress: 78 },
     ],
   },
 ]
 
 export const tools: Array<{ name: string; category: string; usedFor: string; icon: LucideIcon }> = [
-  { name: 'Burp Suite', category: 'Web Security', usedFor: 'HTTP interception and request testing', icon: ScanSearch },
-  { name: 'OWASP ZAP', category: 'Web Security', usedFor: 'Automated vulnerability scanning practical', icon: Shield },
-  { name: 'Wireshark', category: 'Network Security', usedFor: 'Packet capture and traffic analysis', icon: Activity },
-  { name: 'Nmap', category: 'Reconnaissance', usedFor: 'Network scanning', icon: Radar },
-  { name: 'Volatility', category: 'Memory Forensics', usedFor: 'Memory artifact analysis', icon: BrainCircuit },
-  { name: 'FTK Imager', category: 'Forensics', usedFor: 'Evidence acquisition', icon: Fingerprint },
-  { name: 'Autopsy', category: 'Forensics', usedFor: 'File system investigation', icon: Binary },
-  { name: 'Kali Linux', category: 'Security Lab', usedFor: 'Practical cybersecurity environment', icon: Terminal },
-  { name: 'GitHub', category: 'Development', usedFor: 'Version control and portfolio delivery', icon: Braces },
-  { name: 'Supabase', category: 'Database', usedFor: 'Auth, database, and app data basics', icon: Database },
+  { name: 'Nessus', category: 'Vulnerability Assessment', usedFor: 'Vulnerability assessment and security finding review', icon: Shield },
+  { name: 'Burp Suite', category: 'Web Security', usedFor: 'HTTP interception, request testing, and basic penetration testing tasks', icon: ScanSearch },
+  { name: 'MS Word', category: 'Documentation', usedFor: 'Security finding and report documentation', icon: Braces },
+  { name: 'MS Excel', category: 'Documentation', usedFor: 'Tracking findings, risks, and analysis notes', icon: Database },
+  { name: 'MS PowerPoint', category: 'Presentation', usedFor: 'Presenting security observations and technical work', icon: Globe },
+]
+
+export const learningLabTools: Array<{ name: string; category: string; usedFor: string; icon: LucideIcon }> = [
+  { name: 'OWASP ZAP', category: 'Learning Lab', usedFor: 'Automated web scanning practice outside the resume tool list', icon: Shield },
+  { name: 'Wireshark', category: 'Learning Lab', usedFor: 'Packet capture and network traffic practice', icon: Network },
+  { name: 'Nmap', category: 'Learning Lab', usedFor: 'Service discovery and scan practice', icon: Radar },
+  { name: 'Volatility', category: 'Learning Lab', usedFor: 'Memory forensics practice', icon: BrainCircuit },
+  { name: 'FTK Imager', category: 'Learning Lab', usedFor: 'Evidence acquisition practice', icon: Fingerprint },
+  { name: 'Autopsy', category: 'Learning Lab', usedFor: 'File system investigation practice', icon: Binary },
+  { name: 'Kali Linux', category: 'Operating System', usedFor: 'Practical cybersecurity environment listed in resume OS experience', icon: Terminal },
 ]
 
 export const projects = [
   {
     title: 'PULSE-R24 News Intelligence Platform',
+    type: 'Project Work',
     description:
-      'A news intelligence platform with dashboard, review workflow, evidence library, notifications, global search, analytics, and production deployment planning.',
+      'A project work platform with dashboard, review workflow, evidence library, notifications, global search, analytics, and production deployment planning.',
     problem: 'Organizes review-heavy intelligence workflows into a traceable dashboard.',
-    tech: ['React', 'Supabase', 'Analytics', 'Evidence Library'],
+    tech: ['Dashboard', 'Analytics', 'Evidence Library', 'Workflow Design'],
     learning: 'Improved dashboard planning, review flows, and production thinking.',
-    status: 'Flagship Build',
+    status: 'Project Work',
   },
   {
     title: 'Mini SIEM / SOC Lab',
-    description: 'A student security monitoring project focused on logs, alert visibility, dashboard design, and SOC/SIEM learning.',
+    type: 'Academic / Practical Work',
+    description: 'A student security monitoring practical focused on logs, alert visibility, dashboard design, and SOC/SIEM basics.',
     problem: 'Turns raw log practice into alert visibility and triage habits.',
-    tech: ['Logs', 'Dashboards', 'SOC Concepts'],
+    tech: ['Log Analysis', 'SOC/SIEM Basics', 'Security Monitoring'],
     learning: 'Practiced log review, alert grouping, and SOC dashboard structure.',
-    status: 'Lab Active',
+    status: 'Academic Practical',
   },
   {
     title: 'Voter Management Portal',
-    description: 'A secure government-style portal concept focused on authentication, data management, role-based access, and workflow design.',
+    type: 'Academic Project Work',
+    description: 'A secure portal concept focused on authentication, data management, role-based access, and workflow design.',
     problem: 'Models secure access and structured workflow for sensitive records.',
-    tech: ['Auth', 'RBAC', 'Data Management'],
+    tech: ['Authentication', 'Role-Based Access', 'Data Management'],
     learning: 'Strengthened secure portal design and role-based thinking.',
-    status: 'Concept Build',
+    status: 'Academic Project',
   },
   {
     title: 'OWASP ZAP Practical',
+    type: 'Learning Lab Practical',
     description: 'Web application scanning practical to identify alerts and understand automated vulnerability assessment.',
     problem: 'Makes scanner output understandable and actionable.',
     tech: ['OWASP ZAP', 'Web Alerts', 'Reports'],
     learning: 'Learned alert categories and scanner limitations.',
-    status: 'Practical',
+    status: 'Learning Lab Practical',
   },
   {
     title: 'Burp Suite Practical',
+    type: 'Resume Tool Practical',
     description: 'HTTP interception practical to inspect requests and understand web traffic behavior.',
     problem: 'Reveals how requests, responses, and parameters move through apps.',
     tech: ['Burp Suite', 'HTTP', 'Proxy'],
     learning: 'Practiced request inspection and web traffic reasoning.',
-    status: 'Practical',
+    status: 'Resume Tool Practical',
   },
   {
-    title: 'Wireshark Traffic Analysis',
-    description: 'Network packet analysis practical for observing traffic, protocols, and suspicious patterns.',
-    problem: 'Converts packet captures into protocol-level observations.',
-    tech: ['Wireshark', 'PCAP', 'Protocols'],
-    learning: 'Built packet reading and traffic pattern recognition skills.',
-    status: 'Practical',
+    title: 'Nessus Vulnerability Assessment',
+    type: 'Experience / Practical Work',
+    description: 'Vulnerability assessment practice aligned with HTC Global Services trainee experience.',
+    problem: 'Identifies and documents security vulnerabilities for review and mitigation planning.',
+    tech: ['Nessus', 'Vulnerability Assessment', 'Risk Analysis'],
+    learning: 'Practiced vulnerability review, reporting, and risk-based security thinking.',
+    status: 'Resume Tool Practical',
   },
   {
     title: 'Digital Forensics Practical Work',
-    description: 'Forensic learning using tools like FTK Imager, Autopsy, Volatility, and evidence documentation.',
-    problem: 'Documents forensic artifacts in a repeatable investigation flow.',
-    tech: ['FTK Imager', 'Autopsy', 'Volatility'],
-    learning: 'Practiced evidence handling, artifact review, and reporting.',
-    status: 'Practical',
+    type: 'Academic / Learning Practical',
+    description: 'Digital forensics learning aligned with postgraduate Cyber Security & Digital Forensics coursework.',
+    problem: 'Builds a repeatable investigation mindset for evidence, timelines, and documentation.',
+    tech: ['Digital Forensics', 'Evidence Documentation', 'Investigation Notes'],
+    learning: 'Practiced evidence handling concepts, artifact review, and reporting discipline.',
+    status: 'Academic Practical',
   },
 ]
 
@@ -185,35 +258,35 @@ export const evidenceSteps = [
 ]
 
 export const socStats = [
-  { label: 'Logs Reviewed', value: 1280 },
-  { label: 'Alerts Studied', value: 86 },
-  { label: 'Tools Practiced', value: 10 },
+  { label: 'Logs Analyzed', value: 1280 },
+  { label: 'Security Findings Documented', value: 86 },
+  { label: 'Resume Tools Practiced', value: 5 },
   { label: 'Projects Built', value: 7 },
   { label: 'Lab Exercises Completed', value: 24 },
 ]
 
 export const labRecords = [
-  ['Burp Suite Traffic Interception', 'Inspect HTTP requests', 'Burp Suite', 'How parameters and headers change request behavior', 'Captured and reviewed sample traffic'],
-  ['OWASP ZAP Automated Scan', 'Run a baseline scan', 'OWASP ZAP', 'How automated alerts are grouped and prioritized', 'Created alert notes for review'],
-  ['Wireshark Traffic Analysis', 'Observe network packets', 'Wireshark', 'Protocol patterns and suspicious traffic indicators', 'Documented packet observations'],
-  ['Google Dorking Practical', 'Understand search operators', 'Browser', 'How exposed data can be found with careful queries', 'Built a defensive checklist'],
-  ['CTF Metadata Challenge', 'Extract hidden file metadata', 'Exif tools', 'How metadata can reveal investigation context', 'Recorded artifacts and findings'],
-  ['Volatility Memory Forensics', 'Review memory artifacts', 'Volatility', 'Process and memory investigation basics', 'Mapped basic artifact categories'],
-  ['Nmap Scanning Practical', 'Discover services', 'Nmap', 'Scan types, ports, and service enumeration', 'Prepared scan summary notes'],
+  ['Nessus Vulnerability Assessment', 'Conduct vulnerability assessment', 'Nessus', 'How findings support risk analysis and mitigation planning', 'Documented security findings for review'],
+  ['Burp Suite Traffic Interception', 'Inspect HTTP requests', 'Burp Suite', 'How web requests can be tested during basic penetration testing', 'Captured and reviewed sample traffic'],
+  ['System and Network Log Analysis', 'Analyze logs for suspicious activity', 'System / Network Logs', 'How suspicious activities appear in log records', 'Prepared monitoring and analysis notes'],
+  ['Risk Analysis Documentation', 'Support mitigation planning', 'MS Word / MS Excel', 'How to document vulnerabilities, risks, and follow-up actions', 'Maintained structured security reports'],
+  ['OSINT Techniques Sakura Room', 'Practice OSINT investigation techniques', 'TryHackMe', 'How OSINT techniques support cybersecurity investigation', 'Completed OSINT hackathon participation work'],
+  ['Digital Forensics Coursework', 'Apply digital investigation concepts', 'Academic Practical', 'How evidence handling and reporting support forensic work', 'Prepared practical learning notes'],
+  ['Basic Penetration Testing Tasks', 'Perform guided security testing', 'Burp Suite / Kali Linux', 'How penetration testing tasks are performed under guidance', 'Recorded findings and lessons learned'],
 ].map(([title, aim, tool, learned, result]) => ({ title, aim, tool, learned, result }))
 
 export const journey = [
-  'Cybersecurity fundamentals',
-  'Networking basics',
-  'Web security tools',
-  'Digital forensics tools',
-  'SIEM and SOC learning',
-  'Secure project building',
-  'Internship/fresher readiness',
+  'Higher Secondary Certificate - Vidya Bhavan Higher Secondary School, Puducherry - 2021-2022',
+  'Bachelor of Computer Applications, Cyber Security - Hindustan Institute, Chennai - 2022-2025',
+  'Guvi certifications in Ethical Hacking, Networking, and Dark Web - 2022',
+  'Bootcamp in Penetration Testing - Hackers Villa Cybersecurity Pvt Ltd - 2023',
+  'HTC Global Services Project Trainee experience - July 2024 to June 2025',
+  'Post Graduate Diploma in Cyber Security & Digital Forensics - Rashtriya Raksha University, Puducherry - 2025-2026',
+  'Cybersecurity internship and fresher readiness',
 ]
 
 export const contactLinks = [
-  { label: 'Email', href: 'mailto:your-email@example.com', icon: Mail },
-  { label: 'GitHub', href: 'https://github.com/your-username', icon: BadgeCheck },
-  { label: 'LinkedIn', href: 'https://linkedin.com/in/your-profile', icon: Server },
+  { label: 'Email', href: `mailto:${profile.email}`, icon: Mail },
+  { label: 'GitHub', href: '', icon: Braces, status: 'Coming Soon' },
+  { label: 'LinkedIn', href: '', icon: Server, status: 'Coming Soon' },
 ]

@@ -1,4 +1,4 @@
-import { Fingerprint, MapPin, ShieldCheck } from 'lucide-react'
+import { Fingerprint, Mail, MapPin, ShieldCheck } from 'lucide-react'
 import { focusAreas, profile } from '../../data/portfolio'
 import { GlowCard } from '../ui/GlowCard'
 import { SectionTitle } from '../ui/SectionTitle'
@@ -17,6 +17,7 @@ export function IdentityCard() {
         <p>{profile.title}</p>
         <div className="identity-grid">
           <span><MapPin size={16} />{profile.location}</span>
+          <span><Mail size={16} />{profile.email}</span>
           <span><ShieldCheck size={16} />{profile.status}</span>
         </div>
         <div className="chip-list">

@@ -6,8 +6,9 @@ const navItems = [
   ['Identity', '#identity'],
   ['Skills', '#skills'],
   ['Tools', '#tools'],
+  ['Experience', '#experience'],
   ['Projects', '#projects'],
-  ['Labs', '#labs'],
+  ['Certifications', '#certifications'],
   ['Contact', '#contact'],
 ]
 
@@ -20,12 +21,19 @@ export function Navbar() {
         <span className="brand-mark">SY</span>
         <span>{profile.name}</span>
       </a>
-      <nav className={open ? 'nav-links open' : 'nav-links'} aria-label="Main navigation">
+      <nav className={open ? 'nav-links open' : 'nav-links'} id="main-navigation" aria-label="Main navigation">
         {navItems.map(([label, href]) => (
           <a key={href} href={href} onClick={() => setOpen(false)}>{label}</a>
         ))}
       </nav>
-      <button className="nav-toggle" type="button" aria-label="Toggle navigation" onClick={() => setOpen((value) => !value)}>
+      <button
+        className="nav-toggle"
+        type="button"
+        aria-controls="main-navigation"
+        aria-expanded={open}
+        aria-label="Toggle navigation"
+        onClick={() => setOpen((value) => !value)}
+      >
         {open ? <X size={20} /> : <Menu size={20} />}
       </button>
     </header>

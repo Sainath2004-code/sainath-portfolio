@@ -1,45 +1,38 @@
-# Sainath Y - 3D Cybersecurity Portfolio
+# Sainath Yoganatham - 3D Cybersecurity Portfolio
 
-An advanced React, Vite, and TypeScript portfolio website for **Sainath Y**, a Cybersecurity and Digital Forensics student from India.
+Static 3D cybersecurity and digital forensics portfolio for **Sainath Yoganatham** from **Puducherry, India**.
 
-This portfolio is designed to feel like an interactive cybersecurity command center instead of a normal student portfolio. It includes a lightweight procedural 3D hero scene, SOC dashboard visuals, a digital forensics evidence board, project case studies, lab records, skill matrix, terminal-style about section, and resume/contact sections.
+The portfolio content is aligned to the uploaded resume and is centralized in:
 
-## About Sainath
+```txt
+src/data/portfolio.ts
+```
 
-**Name:** Sainath Y  
+## Resume Profile
+
+**Name:** Sainath Yoganatham  
 **Title:** Cybersecurity & Digital Forensics Student  
-**Location:** India  
-**Status:** Available for Internship / Fresher Opportunities
+**Location:** Puducherry, India  
+**Email:** yk.sainath29@gmail.com
 
-Focus areas:
+Professional summary:
 
-- SOC Analysis
-- SIEM
-- Web Security
-- Vulnerability Assessment
-- Digital Forensics
-- Network Security
-- Secure Web Development
-- Incident Response Basics
+A motivated cybersecurity fresher with hands-on experience in vulnerability assessment and log analysis using tools like Nessus and Burp Suite. Strong foundation in security analysis, risk management, practical cybersecurity training, and problem-solving. Interested in cybersecurity operations, SOC/SIEM basics, web security, vulnerability assessment, and digital forensics.
 
-## What I Built
+## Resume-Aligned Content
 
-This project was built as a futuristic cyber-lab portfolio with:
+- Education
+- HTC Global Services project trainee experience
+- Technical skills
+- Resume tools: Nessus, Burp Suite, MS Word, MS Excel, MS PowerPoint
+- Operating systems
+- Soft skills
+- Languages
+- Certifications
+- Academic and technical participation
+- Academic/project/practical work
 
-- Cyber preloader
-- 3D hero command center
-- Procedural cyber shield, globe rings, nodes, particles, and grid floor
-- Holographic identity card
-- Terminal about section
-- Skill matrix with progress indicators
-- Tools arsenal section
-- Project case study room
-- Digital forensics evidence board
-- SOC dashboard simulation
-- Cyber lab practical records
-- Learning journey timeline
-- Resume scanner section
-- Contact portal
+Tools not listed in the resume are kept separately in the website as **Learning Lab Tools**.
 
 ## Tech Stack
 
@@ -50,116 +43,38 @@ This project was built as a futuristic cyber-lab portfolio with:
 - Three.js
 - React Three Fiber
 - Framer Motion
-- Lenis smooth scroll
+- Lenis
 - Lucide React
 - CSS
 
-## Performance Work
-
-The 3D experience is optimized to keep the site smooth and build output clean:
-
-- Lazy-loaded 3D hero scene with `React.lazy` and `Suspense`
-- Split heavy 3D scene parts into separate chunks
-- Removed unused heavy 3D helper packages from the active build
-- Procedural geometry instead of external 3D models
-- Optimized particle count
-- Lightweight CSS glow, vignette, and scanline overlays
-- Mobile-friendly fallbacks and reduced-motion support
-- Vite build passes without chunk-size warnings
-
-## Projects Included
-
-- PULSE-R24 News Intelligence Platform
-- Mini SIEM / SOC Lab
-- Voter Management Portal
-- OWASP ZAP Practical
-- Burp Suite Practical
-- Wireshark Traffic Analysis
-- Digital Forensics Practical Work
-
-## How I Made This
-
-I created this as a personal portfolio for cybersecurity internship and fresher opportunities. The goal was to make the website visually impressive while still professional and practical.
-
-The portfolio data is centralized in:
-
-```txt
-src/data/portfolio.ts
-```
-
-Most page sections read from that file, so the name, links, focus areas, tools, projects, lab records, and contact placeholders can be updated from one place.
-
-The 3D hero uses React Three Fiber with lightweight procedural objects:
-
-```txt
-src/components/three/
-```
-
-The main page sections live in:
-
-```txt
-src/components/sections/
-```
-
-The layout and shared UI helpers live in:
-
-```txt
-src/components/layout/
-src/components/ui/
-```
-
 ## Run Locally
-
-Install dependencies:
 
 ```bash
 npm install
-```
-
-Start the development server:
-
-```bash
 npm run dev
 ```
 
-Run lint:
+## Verify
 
 ```bash
 npm run lint
-```
-
-Create a production build:
-
-```bash
 npm run build
-```
-
-Preview the production build:
-
-```bash
-npm run preview
 ```
 
 ## Resume
 
-The resume button points to:
+Resume buttons point to:
+
+```txt
+/resume.pdf
+```
+
+Place the final resume file at:
 
 ```txt
 public/resume.pdf
 ```
 
-If the file is missing, the app still builds and runs. Add `resume.pdf` inside the `public` folder when ready.
+## Deployment
 
-## Contact Links
-
-Email, GitHub, and LinkedIn links are placeholders in:
-
-```txt
-src/data/portfolio.ts
-```
-
-Update them with Sainath's real links before final deployment.
-
-## Author
-
-Built by **Sainath Y**.
+This is a free, static Vite app and is deployable on Vercel.

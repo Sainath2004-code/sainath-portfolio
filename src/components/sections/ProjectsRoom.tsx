@@ -1,5 +1,5 @@
-import { ExternalLink, Info } from 'lucide-react'
-import { projects } from '../../data/portfolio'
+import { Mail, Info } from 'lucide-react'
+import { profile, projects } from '../../data/portfolio'
 import { SectionTitle } from '../ui/SectionTitle'
 import { TiltCard } from '../ui/TiltCard'
 
@@ -12,6 +12,7 @@ export function ProjectsRoom() {
           <TiltCard key={project.title} className={index === 0 ? 'project-card featured' : 'project-card'}>
             <span className="status-badge">{project.status}</span>
             <h3>{project.title}</h3>
+            <p className="project-type">{project.type}</p>
             <p>{project.description}</p>
             <dl>
               <dt>Problem solved</dt><dd>{project.problem}</dd>
@@ -19,9 +20,8 @@ export function ProjectsRoom() {
               <dt>Learning outcome</dt><dd>{project.learning}</dd>
             </dl>
             <div className="card-actions">
-              <a href="#contact"><Info size={16} />Details</a>
-              <a href="https://github.com/your-username" target="_blank" rel="noreferrer"><ExternalLink size={16} />GitHub</a>
-              <a href="#projects"><ExternalLink size={16} />Demo</a>
+              <a href="#contact" aria-label={`Request details for ${project.title}`}><Info size={16} />Details</a>
+              <a href={`mailto:${profile.email}`} aria-label={`Email Sainath about ${project.title}`}><Mail size={16} />Email</a>
             </div>
           </TiltCard>
         ))}
