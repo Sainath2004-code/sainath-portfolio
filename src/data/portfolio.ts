@@ -287,6 +287,6 @@ export const journey = [
 
 export const contactLinks = [
   { label: 'Email', href: `mailto:${profile.email}`, icon: Mail },
-  { label: 'GitHub', href: '', icon: Braces, status: 'Coming Soon' },
-  { label: 'LinkedIn', href: '', icon: Server, status: 'Coming Soon' },
+  { label: 'GitHub', href: 'https://github.com/Sainath2004-code', icon: Braces },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/sainath-yoganatham-4ba537351', icon: Server },
 ]

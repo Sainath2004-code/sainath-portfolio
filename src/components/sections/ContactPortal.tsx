@@ -12,18 +12,10 @@ export function ContactPortal() {
           <p>Email: {profile.email}</p>
         </div>
         {contactLinks.map((link) => (
-          link.href ? (
-            <a key={link.label} href={link.href} target={link.href.startsWith('http') ? '_blank' : undefined} rel={link.href.startsWith('http') ? 'noreferrer' : undefined}>
-              <link.icon size={22} />
-              {link.label}
-            </a>
-          ) : (
-            <button className="contact-disabled" key={link.label} type="button" disabled>
-              <link.icon size={22} />
-              <span>{link.label}</span>
-              <small>{link.status}</small>
-            </button>
-          )
+          <a key={link.label} href={link.href} target={link.href.startsWith('http') ? '_blank' : undefined} rel={link.href.startsWith('http') ? 'noreferrer' : undefined}>
+            <link.icon size={22} />
+            {link.label}
+          </a>
         ))}
         <a href={profile.resumePath} target="_blank" rel="noreferrer">Download Resume</a>
       </div>
